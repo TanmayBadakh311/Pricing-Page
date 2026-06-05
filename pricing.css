@@ -1,0 +1,215 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f0ff, #e8e1ff);
+}
+
+.main-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 24px;
+}
+
+.container {
+    width: min(1300px, 100%);
+    background: rgba(246, 243, 255, 0.98);
+    border-radius: 36px;
+    padding: 44px 38px 38px;
+    box-shadow: 0 32px 130px rgba(25, 12, 75, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.header {
+    max-width: 760px;
+    margin: 0 auto 34px;
+    text-align: center;
+}
+
+.header p {
+    color: #6e5bff;
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.header h1 {
+    font-size: clamp(2rem, 3.2vw, 3.4rem);
+    line-height: 1.05;
+    color: #151429;
+}
+
+.card-container {
+    display: flex;
+    gap: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 34px 30px;
+    border-radius: 30px;
+    background: #ffffff;
+    box-shadow: 0 28px 55px rgba(49, 40, 105, 0.08);
+    border: 1px solid rgba(105, 95, 255, 0.08);
+    min-height: 660px;
+}
+
+.highlight {
+    background: rgb(240,237,255); 
+    padding: 34px 30px;
+    border-radius: 30px;
+}
+.badge {
+    display: flex;
+    margin-top: -50px;
+    margin-left: 80px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: #f9d94a;
+    color: #2b1f3d;
+    font-size: 0.82rem;
+    font-weight: 700;
+    width: max-content;
+}
+
+.card-head h2 {
+    font-size: 1.9rem;
+    margin-bottom: 16px;
+    color: #1f1b37;
+}
+
+.card-head p {
+    color: #6b6b88;
+    line-height: 1.8;
+    font-size: 0.98rem;
+}
+
+.price-section {
+    margin: 28px 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #16122d;
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.period {
+    font-size: 1rem;
+    color: #6e5bff;
+    font-weight: 600;
+}
+
+.price-section small {
+    color: #8e8ea7;
+    font-size: 0.92rem;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 999px;
+    padding: 16px 0;
+    margin: 0 auto 24px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(135deg, #6f5cff, #5f45ff);
+    box-shadow: 0 18px 35px rgba(95, 69, 255, 0.22);
+}
+
+.feature-group {
+    margin-top: 30px;
+}
+
+.feature-group h3 {
+    color: #1d1b36;
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+}
+
+.radio-list,
+.check-list {
+    display: grid;
+    gap: 14px;
+    padding-left: 0;
+}
+
+.radio-list li,
+.check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: #5d5b7f;
+    line-height: 1.75;
+    font-size: 0.95rem;
+}
+
+.radio-list li::before,
+.check-list li::before {
+    content: '';
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
+    margin-top: 6px;
+    border-radius: 50%;
+    background: #dcd8ff;
+}
+
+.check-list li::before {
+    background: #6f5cff;
+    mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="white" d="M6.2 11.7L3 8.5l1.2-1.2 2 2 5-5 1.2 1.2z"/></svg>') center/contain no-repeat;
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="white" d="M6.2 11.7L3 8.5l1.2-1.2 2 2 5-5 1.2 1.2z"/></svg>') center/contain no-repeat;
+}
+
+@media (max-width: 1080px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-height: auto;
+    }
+
+    .featured {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 28px 24px 24px;
+    }
+
+    .header h1 {
+        font-size: 2.1rem;
+    }
+
+    .card {
+        padding: 24px;
+    }
+
+    button {
+        padding: 14px 0;
+    }
+}
